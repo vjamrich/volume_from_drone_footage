@@ -1,0 +1,33 @@
+{
+  "input path": "Input",
+  "output path": "Output",
+  "metashape location": "C:\\Program Files\\Agisoft\\Metashape Pro\\metashape.exe",
+
+  "settings": {
+    "accuracy align photos": "Highest",
+    "camera quality threshold": 0.5,
+
+    "quality build dense cloud": "High",
+    "filtering build dense cloud": "Aggressive",
+
+    "quality build mesh": "Medium",
+    "polygon count build mesh": "Medium",
+
+    "marker type": "12bit",
+    "distance between markers [meters]": 10,
+    "marker detection tolerance": 50
+
+  },
+
+  "operations": {
+    "add photos": true,
+    "don't use low quality photos": true,
+    "align photos": true,
+    "detect markers": true,
+    "build dense cloud": true,
+    "build mesh": true,
+    "close holes in the mesh": true,
+    "output text file with volume": true
+
+  }
+}
