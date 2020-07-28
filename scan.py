@@ -155,13 +155,13 @@ class Scan:
         angle_y = atan2(sqrt(vz**2 + vx**2), vy)
         angle_z = atan2(sqrt(vx**2 + vy**2), vz)
         
-        rot_x_matrix = self.__get_rot_matrix("x", angle_x)
-        rot_y_matrix = self.__get_rot_matrix("y", angle_y)
-        rot_z_matrix = self.__get_rot_matrix("z", angle_z)
+        rot_x_matrix = self._get_rot_matrix("x", angle_x)
+        rot_y_matrix = self._get_rot_matrix("y", angle_y)
+        rot_z_matrix = self._get_rot_matrix("z", angle_z)
 
         self.chunk.region.rot = rot_x_matrix * rot_y_matrix * rot_z_matrix
 
-    def __get_rot_matrix(self, axis, radians):
+    def _get_rot_matrix(self, axis, radians):
         r = radians
         matrix = None
         if axis == 'z':
