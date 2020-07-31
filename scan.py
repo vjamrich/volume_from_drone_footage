@@ -12,8 +12,8 @@ class Scan:
         self.photos = os.listdir(self.input)
         self.output = self.config["output path"]
         self.basename = os.path.basename(self.input)
-        self.timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-        self.project_path = self.output + "\\" + self.basename + "_" + self.timestamp
+        self.timestamp = datetime.now()
+        self.project_path = self.output + "\\" + self.basename + "_" + self.timestamp.strftime("%Y-%m-%d_%H-%M-%S")
         self.doc = Metashape.app.document
         self.chunk = None
 
@@ -183,6 +183,6 @@ class Scan:
     def output_report(self):
         f = open(self.project_path + "\\" + self.basename + "_OUTPUT.txt", "w+")
         f.write("Project name: " + self.basename + "\n")
-        f.write("Time [YYYY-MM-DD hh:mm:ss]: " + datetime.now().strftime("%Y-%m-%d %H:%M:%S" + "\n"))
+        f.write("Time [YYYY-MM-DD hh:mm:ss]: " + self.timestamp.strftime("%Y-%m-%d %H:%M:%S" + "\n"))
         f.write("Volume [cubic meters]: " + str(round(self.volume, 2)) + "\n")
         f.close()

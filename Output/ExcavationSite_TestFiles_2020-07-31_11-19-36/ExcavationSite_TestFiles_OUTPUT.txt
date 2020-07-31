@@ -1,0 +1,3 @@
+Project name: ExcavationSite_TestFiles
+Time [YYYY-MM-DD hh:mm:ss]: 2020-07-31 11:19:36
+Volume [cubic meters]: 48.75
